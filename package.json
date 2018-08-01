@@ -16,7 +16,7 @@
     "fast-json-stable-stringify": "^2.0.0",
     "graceful-fs": "^4.1.11",
     "jest-config": "^23.4.1",
-    "jest-haste-map": "globegitter/jest-haste-amp",
+    "jest-haste-map": "globegitter/jest-haste-map",
     "jest-message-util": "^23.4.0",
     "jest-regex-util": "^23.3.0",
     "jest-resolve": "globegitter/jest-resolve",
