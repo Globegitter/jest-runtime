@@ -20,7 +20,7 @@
     "jest-message-util": "^23.4.0",
     "jest-regex-util": "^23.3.0",
     "jest-resolve": "globegitter/jest-resolve",
-    "jest-snapshot": "globegitter/jest-runtime",
+    "jest-snapshot": "globegitter/jest-snapshot",
     "jest-util": "^23.4.0",
     "jest-validate": "^23.4.0",
     "micromatch": "^2.3.11",
