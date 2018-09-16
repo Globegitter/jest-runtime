@@ -127,6 +127,7 @@ const cache = new Map();
 const configToJsonMap = new Map();
 // Cache regular expressions to test whether the file needs to be preprocessed
 const ignoreCache = new WeakMap();
+const preserveSymlinks = true;
 
 // To reset the cache for specific changesets (rather than package version).
 const CACHE_VERSION = '1';
@@ -273,9 +274,9 @@ class ScriptTransformer {
     }
   }
 
-  transformSource(filename, content, instrument) {
+  transformSource(filepath, content, instrument) {
+    const filename = preserveSymlinks ? filepath : this._getRealPath(filepath);
     const transform = this._getTransformer(filename);
-
     const cacheFilePath = this._getFileCachePath(filename, content, instrument);
     let sourceMapPath = cacheFilePath + '.map';
     // Ignore cache if `config.cache` is set (--no-cache)
